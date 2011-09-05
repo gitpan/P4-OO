@@ -1,7 +1,7 @@
 ######################################################################
-#  Copyright (c)2010-2011, David L. Armstrong.
+#  Copyright (c)2011, David L. Armstrong.
 #
-#  P4::OO::BranchSet.pm
+#  P4::OO::ChangelistSet.pm
 #
 #  See COPYRIGHT AND LICENSE section in pod text below for usage
 #   and distribution rights.
@@ -10,10 +10,7 @@
 
 =head1 NAME
 
-P4::OO::BranchSet
-
 =head1 SYNOPSIS
-
 
 =head1 DESCRIPTION
 
@@ -23,22 +20,17 @@ P4::OO::BranchSet
 ######################################################################
 # Package Initialization
 #
-    package P4::OO::BranchSet;
+    package P4::OO::ChangelistSet;
     our $VERSION = '0.00_02';
-    use base 'P4::OO::_Set';
+    use base 'P4::OO::ChangeSet';
     use strict;
 
 
 ######################################################################
-# Globals
 #
-
-
+# P4::OO::ChangelistSet is just a stub, P4::OO::ChangeSet does all the work
+#
 ######################################################################
-# Methods
-#
-
-
 
 ######################################################################
 # Standard authorship and copyright for documentation
@@ -50,7 +42,7 @@ David L. Armstrong <armstd@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-P4::OO::BranchSet is Copyright (c)2010-2011, David L. Armstrong.
+P4::OO::ChangelistSet is Copyright (c)2011, David L. Armstrong.
 
  This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself, either Perl

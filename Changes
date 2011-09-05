@@ -1,5 +1,14 @@
 Revision history for Perl extension P4::OO.
 
 0.00_01 2011-Jun-04 armstd@cpan.org
- - Releasing it since it seems stable at this point.  It works, if you can figure out how to use it. :)
+ - Releasing it since it seems stable at this point.  It works, if you
+   can figure out how to use it. :)
 
+0.00_02 2011-Sep-04 armstd@cpan.org
+ - Added more documentation, made querying more accessible - all objects
+   can $self->query() now
+ - Started work on $p4Conn->runCommand(), for executing all Perforce
+   commands and massaging output into P4::OO objects where possible,
+   rather than making each package parse P4PERL output into P4::OO
+   objects themselves.  Should provide somplicity and consistency outside
+   of P4::OO::_Connection::P4PERL, which is really the goal.

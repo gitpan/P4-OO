@@ -21,7 +21,7 @@
 # Package Initialization
 #
     package P4::OO::Depot;
-    our $VERSION = '0.00_01';
+    our $VERSION = '0.00_02';
     use base 'P4::OO::_SpecObj';
     use strict;
 

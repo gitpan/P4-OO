@@ -10,6 +10,8 @@ WriteMakefile(
                            'Test::Exception' => undef,
                            'Error::Simple' => 0,
                            'Exception::Class' => 0,
+                           'Readonly' => 0,
+                           'Scalar::Util' => 0,
                          }, # e.g., Module::Name => 1.1
     PL_FILES          => {},  # Don't execute any .PL files in module root
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005

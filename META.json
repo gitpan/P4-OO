@@ -27,6 +27,8 @@
       },
       "runtime" : {
          "requires" : {
+            "Readonly" : 0,
+            "Scalar::Util" : 0,
             "Error::Simple" : 0,
             "Exception::Class" : 0,
             "P4" : 0,
@@ -37,87 +39,95 @@
    "provides" : {
       "P4::OO" : {
          "file" : "lib/P4/OO.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::Branch" : {
          "file" : "lib/P4/OO/Branch.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::BranchSet" : {
          "file" : "lib/P4/OO/BranchSet.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::Change" : {
          "file" : "lib/P4/OO/Change.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::ChangeSet" : {
          "file" : "lib/P4/OO/ChangeSet.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
+      },
+      "P4::OO::Changelist" : {
+         "file" : "lib/P4/OO/Changelist.pm",
+         "version" : "0.00_02"
+      },
+      "P4::OO::ChangelistSet" : {
+         "file" : "lib/P4/OO/ChangelistSet.pm",
+         "version" : "0.00_02"
       },
       "P4::OO::Client" : {
          "file" : "lib/P4/OO/Client.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::ClientSet" : {
          "file" : "lib/P4/OO/ClientSet.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::Depot" : {
          "file" : "lib/P4/OO/Depot.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::DepotSet" : {
          "file" : "lib/P4/OO/DepotSet.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::File" : {
          "file" : "lib/P4/OO/File.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::FileSet" : {
          "file" : "lib/P4/OO/FileSet.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::Group" : {
          "file" : "lib/P4/OO/Group.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::GroupSet" : {
          "file" : "lib/P4/OO/GroupSet.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::Job" : {
          "file" : "lib/P4/OO/Job.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::JobSet" : {
          "file" : "lib/P4/OO/JobSet.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::Label" : {
          "file" : "lib/P4/OO/Label.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::LabelSet" : {
          "file" : "lib/P4/OO/LabelSet.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::User" : {
          "file" : "lib/P4/OO/User.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::UserSet" : {
          "file" : "lib/P4/OO/UserSet.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::Workspace" : {
          "file" : "lib/P4/OO/Workspace.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       },
       "P4::OO::WorkspaceSet" : {
          "file" : "lib/P4/OO/WorkspaceSet.pm",
-         "version" : "0.00_01"
+         "version" : "0.00_02"
       }
    },
    "release_status" : "testing",
@@ -126,5 +136,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.00_01"
+   "version" : "0.00_02"
 }

@@ -39,7 +39,7 @@ P4::OO::_Base - Base class for all P4::OO objects
 # Package Initialization
 #
     package P4::OO::_Base;
-    our $VERSION = '0.00_01';
+    our $VERSION = '0.00_02';
 
     # Import exception methods and hierarchy
     use P4::OO::_Error;
@@ -53,8 +53,14 @@ P4::OO::_Base - Base class for all P4::OO objects
 
 
 ######################################################################
-# Methods
-#
+
+=head1 CONSTRUCTOR
+
+=cut
+
+######################################################################
+
+######################################################################
 sub new
 {
     my $proto = shift;
@@ -69,6 +75,34 @@ sub new
     return( $self );
 }
 
+
+######################################################################
+
+=head1 METHODS
+
+=cut
+
+######################################################################
+
+=head2 query
+
+  PURPOSE:
+    Helper method that allows all subclass objects to query Perforce.
+
+  PARAMETERS/RETURNS/THROWS:
+    See Documentation for P4::OO::_Connection for details
+
+=cut
+
+######################################################################
+sub query
+{
+    my $self = shift();
+
+    my $p4Conn = $self->_getP4Connection();
+
+    return( $p4Conn->query( @_ ) );
+}
 
 
 sub _uniqueID

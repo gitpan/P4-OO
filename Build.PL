@@ -9,6 +9,8 @@ my $build = Module::Build->new
                      'perl'             => '5.8.8',
                      'Error::Simple'    => 0,
                      'Exception::Class' => 0,
+                     'Readonly' => 0,
+                     'Scalar::Util' => 0,
                      'P4' => 0,
                    },
      'configure_requires' => {

@@ -15,6 +15,8 @@ t/P4-OO-BranchSet.t
 t/P4-OO-Branch.t
 t/P4-OO-ChangeSet.t
 t/P4-OO-Change.t
+t/P4-OO-ChangelistSet.t
+t/P4-OO-Changelist.t
 t/P4-OO-ClientSet.t
 t/P4-OO-Client.t
 t/P4-OO-DepotSet.t
@@ -42,6 +44,8 @@ lib/P4/OO/Branch.pm
 lib/P4/OO/BranchSet.pm
 lib/P4/OO/Change.pm
 lib/P4/OO/ChangeSet.pm
+lib/P4/OO/Changelist.pm
+lib/P4/OO/ChangelistSet.pm
 lib/P4/OO/Client.pm
 lib/P4/OO/ClientSet.pm
 lib/P4/OO/Depot.pm

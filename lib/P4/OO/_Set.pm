@@ -21,7 +21,7 @@
 # Package Initialization
 #
     package P4::OO::_Set;
-    our $VERSION = '0.00_01';
+    our $VERSION = '0.00_02';
     use base 'P4::OO';
     use strict;
 
@@ -96,6 +96,13 @@ sub listObjects
 
     # Try to provide calling flexibility here... this might not be a good thing.
     return( @{$setList} );
+}
+
+sub listObjectIDs
+{
+    my $self = shift();
+
+    return( map { $_->_uniqueID() } ( $self->listObjects() ) );
 }
 
 

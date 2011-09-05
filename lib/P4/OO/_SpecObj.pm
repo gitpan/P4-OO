@@ -20,7 +20,7 @@
 # Package Initialization
 #
     package P4::OO::_SpecObj;
-    our $VERSION = '0.00_01';
+    our $VERSION = '0.00_02';
     use base 'P4::OO';
     use strict;
 
@@ -39,10 +39,16 @@
 # Methods
 #
 
+sub _uniqueID
+{
+    my $self = shift();
+
+    return( $self->_getSpecID() );
+}
+
 sub _getSpecID
 {
     my $self = shift();
-    my $caller = ( caller( 1 ) )[3];
 
     my $specID = $self->_getAttr( 'id' );
 
@@ -52,7 +58,7 @@ sub _getSpecID
         $specID = $self->_getAttr( 'id' );
     }
 
-    # If spedID is still undef, oh well.
+    # If specID is still undef, oh well.
     return( $specID );
 }
 

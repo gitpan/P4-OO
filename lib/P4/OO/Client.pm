@@ -21,7 +21,7 @@
 # Package Initialization
 #
     package P4::OO::Client;
-    our $VERSION = '0.00_01';
+    our $VERSION = '0.00_02';
     use base 'P4::OO::_SpecObj';
     use strict;
 
@@ -53,40 +53,17 @@ sub getOpenedFiles
 {
     my $self = shift();
 
-    my $specID = $self->_getSpecID();
+    my $hashArgs = $self->_argsToHash( "getOpenedFiles", @_ );
+
+    if( ! exists( $hashArgs->{'client'} )
+     && ! exists( $hashArgs->{'allClients'} ) )
+    {
+        $hashArgs->{'client'} = $self;
+    }
+
     my $p4Conn = $self->_getP4Connection();
-
-    my @openedCmd = ( 'opened' );
-    if( defined( $specID ) )
-    {
-        push( @openedCmd, '-C', $specID );
-    }
-
-    my $p4Output = $p4Conn->_execCmd( @openedCmd );
-
-    require P4::OO::File;
-    require P4::OO::FileSet;
-
-    # Iterate through the 'p4 opened' output, creating File objects
-    my $fileList = [];
-    foreach my $openedFile ( @{$p4Output} )
-    {
-        # Perforce is a little inconsistent in its use of depotPath/depotFile/etc
-#        my $fileObj = P4::OO::File->new( 'depotPath'  => $openedFile->{'depotFile'},
-#                                       'clientPath' => $openedFile->{'clientFile'},
-#                                       'rev'        => $openedFile->{'rev'},
-#                                     );
-        my $fileObj = P4::OO::File->new( $openedFile );
-
-        push( @{$fileList}, $fileObj );
-    }
-
-    my $p4FileSet = P4::OO::FileSet->new();
-    $p4FileSet->addObjects( @{$fileList} );
-
-    return( $p4FileSet );
+    return( $p4Conn->runCommand( 'opened', $hashArgs ) );
 }
-
 
 ######################################################################
 # Standard authorship and copyright for documentation

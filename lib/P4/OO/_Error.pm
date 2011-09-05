@@ -30,7 +30,7 @@ functionality from P4::OO.
 # Package Initialization
 #
     package P4::OO::_Error;
-    our $VERSION = '0.00_01';
+    our $VERSION = '0.00_02';
 
     use Error::Simple;
     use base qw( Exporter Error::Simple );

@@ -24,7 +24,7 @@ P4::OO::GroupSet
 # Package Initialization
 #
     package P4::OO::GroupSet;
-    our $VERSION = '0.00_01';
+    our $VERSION = '0.00_02';
     use base 'P4::OO::_Set';
     use strict;
 

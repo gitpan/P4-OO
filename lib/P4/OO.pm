@@ -39,6 +39,7 @@ object.
 subcommands by the same names:
  P4:OO::Branch
  P4:OO::Change
+ P4:OO::Changelist - P4:OO::Change by another name.
  P4:OO::Client
  P4:OO::Depot
  P4:OO::Group
@@ -78,7 +79,7 @@ garbage collection time.
 # Package Initialization
 #
     package P4::OO;
-    our $VERSION = '0.00_01';
+    our $VERSION = '0.00_02';
 
     # bring in the _getAttr/_setAttr methods for our use
     use base 'P4::OO::_Base';

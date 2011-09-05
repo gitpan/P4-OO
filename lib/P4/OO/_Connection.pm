@@ -10,7 +10,7 @@
 
 =head1 NAME
 
-P4::OO::_Connection - P4::OO interface to P4PERL
+P4::OO::_Connection - Abstract P4::OO interface for talking to Perforce
 
 =head1 SYNOPSIS
 
@@ -26,7 +26,7 @@ P4::OO::_Connection - P4::OO interface to P4PERL
 # Package Initialization
 #
     package P4::OO::_Connection;
-    our $VERSION = '0.00_01';
+    our $VERSION = '0.00_02';
     use strict;
     use base ( 'P4::OO' );
 
